@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Intro/Math Review</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Andy Ewing" />
+    <script src="01-intro_files/header-attrs/header-attrs.js"></script>
+    <link href="01-intro_files/remark-css/default.css" rel="stylesheet" />
+    <link href="01-intro_files/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="01-intro_files/remark-css/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Intro/Math Review
+## ECON 5110 Microeconomic Theory
+### Andy Ewing
+### Spring 2022
+
+---
+
+
+
+
+
+
+# Modern Microeconomic Theory
+
+.font150[
+**Economics** is the study of human behavior with respect to the production and allocation of scarce resources.
+]
+
+--
+
+or, some such definition like that
+
+--
+
+But, the *science* of economics has evolved over time: 
+* Classical paradigm `\(\rightarrow\)` good at comparative advantage, but couldn't explain the diamond-water paradox.
+* Neoclassical/Marginalist paradigm `\(\rightarrow\)` could explain the paradox.
+
+--
+
+Most modern microeconomics is a refinement of the neoclassical paradigm (game theory, behavioral econ, `\(\ldots\)`)
+
+---
+
+# Economics as a Science
+
+* Social vs. physical science
+* Positive vs. normative statements
+* Choices in the face of incentives
+
+.font150[
+The fundamental neoclassical choice paradigm. 
+
+Choices are based on:
+1. tastes, or preferences
+1. opportunities, or constraints
+]
+
+---
+
+# A More Precise Definition
+
+&lt;blockquote&gt;
+.font150[
+Economics is that discipline within social science that seeks refutable explanations of changes in human events on the basis of observable constraints, utilizing universal postulates of behavior and technology, and the simplifying assumption that the unmeasured variables ("tastes") remain constant. 
+.right[-- (Silberberg and Suen, 2001)]
+]
+&lt;/blockquote&gt;
+
+--
+
+.font130[
+Key point: 
+
+Preference development? `\(\rightarrow\)` Psychology
+
+Changes in constraints? `\(\rightarrow\)` Microeconomics
+]
+
+---
+
+# Sciencing
+
+.font150[
+Theory Requirements
+
+1. Set of assertions (more precise, the better)
+1. Assumptions, test conditions (assumptions `\(\neq\)` assertions)
+1. Events (predictions from 1 &amp; 2 to test)
+]
+--
+.font150[
+Refutable propositions
+* The only useful statement in science
+* Theories are unprovable, but repeated confirmation sure can help!
+]
+
+---
+
+# Comparative Statics
+
+.font150[
+Comparative Statics is the testing of theory in microeconomics. 
+
+Divide variables into: 
+
+1. Choice variables
+
+1. Parameters (exogenous to the model)
+
+Based on theory and the refutable propositions we've set up, we can test how individuals/firms make choices given *changes in* parameters.
+]
+
+---
+
+# Comparative Statics Example
+
+Suppose we assert the following about firms: Firms maximize profits `\(\pi\)` where `\(\pi\)` equals total revenue minus total cost.
+
+Let 
+
+$$
+\begin{aligned}
+R(x) &amp;= \text{total revenue function (depending on output } x ) \\
+C(x) &amp;= \text{total cost function} \\
+tx   &amp;= \text{total tax revenue collected, where } t \text{ is exogenous}
+\end{aligned}
+$$
+Assume the firm is perfectly competitive, i.e., 
+
+--
+
+`$$R(x) = px$$`
+where `\(p\)` is the market price for `\(x\)`.
+
+Based on our assertions and assumptions thus far, our model suggests that the firm wants to maximize
+
+`$$\pi (x) = R(x) - C(x) - tx$$`
+---
+
+# Comparative Statics Example
+
+.font150[
+CALCULUS TIME!
+]
+The first-order condition for a maximum is 
+
+`$$R'(x) - C'(x) - t = 0$$`
+
+and the sufficient second-order condition is 
+
+`$$R''(x) - C''(x) &lt; 0$$`
+The first-order condition is this firm's **implicit choice function**. It is the standard result that a firm will choose the level of output where marginal revenue ( `\(MR\)` ) is equal to marginal cost ( `\(MC\)` ) plus the tax ( `\(t\)` ). 
+
+In general, does a firm know their precise revenue and cost functions?
+
+The more immediately *testable* implications of the theory are changes in observable values such as the tax rate and quantity sold.
+
+---
+
+# Comparative Statics Example
+
+Under certain mathematical conditions/assumptions, the *implicit* choice function can be made *explicit*: 
+
+`$$x = x^*(t)$$`
+In other words, if we know `\(MR\)` and `\(MC\)`, then *as long as the firm behaves consistently with our initial assertion*, we can in principle derive a functional relationship between output and tax rate.
+
+Substitute the explicit function back into the first-order condition to obtain the following *identity*: 
+
+`$$R'(x^*(t)) - C'(x^*(t)) - t \equiv 0$$`
+What makes the above an identity?
+
+---
+
+# Comparative Statics Example
+
+Now we can reframe the question as what happens to `\(x\)` as `\(t\)` changes? We need to refine our initial assertion to include the idea that firms will always equate at the margin for any tax rate in order to make `\(x\)` a function of `\(t\)`. That allows us to pull off the next differentiation: 
+
+`$$R''(x) \dfrac{dx^*}{dt} - C''(x) \dfrac{dx^*}{dt} - 1 \equiv 0$$`
+
+Since `\(R'' - C'' &lt; 0\)` by the second-order condition (and specifically, `\(R'' - C'' \neq 0\)`), we have the following result
+
+`$$\dfrac{dx^*}{dt} \equiv \dfrac{1}{R'' - C''} &lt; 0$$`
+
+The postulate of profit maximization (theory) has led directly to a **refutable proposition** that output will decline as the tax rate increases. 
+
+Note: we didn't even need to know the functional forms of the revenue and cost functions! (You can go back and test it with the perfectly competitive example and see that it doesn't matter.)
+
+---
+class: inverse, mline, center, middle
+
+# Math Review
+
+---
+class: center, middle
+
+&lt;img src="figures/invincible.jpg" width="60%" /&gt;
+
+---
+
+# Derivatives of Univariate Functions
+
+`$$\dfrac{dy}{dx} = f'(x) = \lim_{\Delta x \rightarrow 0} \dfrac{f(x_{2})-f(x_{1})}{\Delta x}$$`
+### Rules and Formulas for Calculating Derivatives
+
+1. `\(f(x) = ax \Rightarrow f'(x) = a\)`
+1. `\(f(x) = a \Rightarrow f'(x) = 0\)`; `\(f(x) = 0 \Rightarrow f'(x) = 0\)`
+1. `\(f(x) = ax^{b} \Rightarrow f'(x) = abx^{b-1}\)`
+1. `\(f(x) = a \ln(bx) \Rightarrow f'(x) = a\cdot \dfrac{b}{bx} = \dfrac{a}{x}\)`; `\(f(x) = e^{ax} \Rightarrow f'(x) = ae^{ax}\)`
+1. Chain Rule: If `\(y = f(g(x))\)`, then `\(\dfrac{dy}{dx} = f'(g(x))g'(x)\)`
+1. Sum Rule: If `\(y = f(x) \pm g(x)\)`, then `\(\dfrac{dy}{dx} = f'(x) \pm g'(x)\)`
+1. Product Rule: If `\(y = f(x) \cdot g(x)\)`, then `\(\dfrac{dy}{dx}=f(x) \cdot g'(x) + g(x) \cdot f'(x)\)`
+1. Quotient Rule: If `\(y = \dfrac{f(x)}{g(x)}\)`, then `\(\dfrac{dy}{dx}=\dfrac{g(x) \cdot f'(x) - f(x) \cdot g'(x)}{[g(x)]^{2}}\)`
+
+---
+
+# Derivatives as Marginal Functions
+
+Since every *marginal* function represents the change in a *total* function, when we have a differentiable total function, we simply take the first derivative to get the marginal function.
+
+--
+
+**Example** Suppose a firm's total cost function can be expressed as: 
+
+`$$TC = q^3 -4q^2 + 6q$$`
+Its marginal cost function is simply the first derivative: 
+
+`$$MC = \dfrac{dTC}{dq} = \dfrac{q^3 - 4q^2 + 6q}{dq} = 3q^2 - 8q + 6$$`
+--
+
+Similarly, the first derivative of a firm's total revenue function is its marginal revenue function. Suppose the total revenue function is: 
+
+`$$TR = 125q - 3q^2$$`
+Its marginal revenue function is: 
+
+`$$MR = \dfrac{dTR}{dq} = \dfrac{125q - 3q^2}{dq} = 125 - 6q$$`
+
+.font50[
+What kind of firm is typically modeled this way?
+]
+
+---
+
+# Higher-Order Derivatives
+
+As long as the derivative of a function is itself differentiable, we can continue taking higher-order derivatives. Usually, the second derivative is important in our problems, and occasionally the third derivative. 
+
+$$
+\begin{aligned}
+y &amp;= f(x) = x^3 + 4x^2 - 6x + 9 \\
+\dfrac{dy}{dx} &amp;= f'(x) = 3x^2 + 8x - 6 \\
+\dfrac{d^2y}{dx^2} &amp;= f''(x) = 6x + 8 \\
+\dfrac{d^3y}{dx^3} &amp;= f'''(x) = 6
+\end{aligned}
+$$
+
+---
+
+# Optimization
+
+Typically, our framework in microeconomics leads to the optimization of some objective function. (Think back to our initial comparative statics example where the firm's objective was to maximize profit.) In the univariate case, the first thing we need to find are the **critical values**. 
+
+--
+
+**Example** Suppose a firm wants to maximize total revenue (whether doing so in the absence of cost considerations is another matter). Its total revenue function is given by: 
+
+`$$TR = 240q - 4q^2$$`
+A critical value of a function `\(f(x)\)`, is a value `\(x_0\)` for which the first derivative evaluated at `\(x_0\)` is equal to zero, `\(f'(x_0) = 0\)`.
+
+--
+
+`$$MR = 240 - 8q = 0 \implies q_0 = 30$$`
+--
+
+But how do we know this is a maximum? 
+
+---
+
+# Optimization
+
+Well, we *could* graph it and check visually: 
+
+&lt;img src="01-intro_files/figure-html/max-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Optimization 
+
+But, a faster way to check is by taking the second derivative. Notice what is happening to the second derivative in the previous graph. As we climb the hill from left to right, the slope of the derivative is negative. That is, the second derivative is less than zero at the critical value.
+
+That yields the following optimization framework for a given function `\(y = f(x)\)`: 
+
+**Step 1: Necessary First-Order Condition (NFOC)** Set the first derivative equal to zero and solve for the critical value(s). 
+
+`$$\dfrac{dy}{dx}\bigg\rvert_{x = x_0} = f'(x_0) = 0$$`
+**Step 2: Sufficient Second-Order Condition (SSOC)** Evaluate the second derivative at the critical value. If the resulting value is negative, you have a (local) maximum. If the resulting value is positive, you have a (local) minimum.
+
+`$$\dfrac{d^2y}{dx^2}\bigg\rvert_{x = x_0} = f''(x_0) &lt; 0 \implies \text{max}$$`
+`$$\dfrac{d^2y}{dx^2}\bigg\rvert_{x = x_0} = f''(x_0) &gt; 0 \implies \text{min}$$`
+
+---
+
+# Derivatives of Multivariate Functions
+
+In economics, we are often optimizing an objective function that has more than one choice variable. (That's what makes many of the problems we tackle interesting in the first place!)
+
+Suppose we have a function of the form: 
+
+`$$y = f(x_1, x_2, \ldots, x_n)$$`
+A **partial derivative** is simply the derivative of the function with respect to a specific variable, while holding all other variables constant.
+
+At the point `\((x_1^0, x_2^0, \ldots, x_n^0)\)`, we can ask the question, "What happens to `\(y\)` when only `\(x_i\)` changes just a little bit?"
+
+`$$\dfrac{\partial y}{\partial x_i} = \lim_{\Delta x_i \rightarrow 0} \dfrac{f(x_1^0,\ldots, x_i^0 + \Delta x_i, \ldots, x_n^0) - f(x_1^0, \ldots, x_i^0, \ldots, x_n^0)}{\Delta x_i}$$`
+This is the Calculus equivalent of the *ceteris paribus* assumption that is found throughout microeconomics and comparative statics.
+
+All the same rules and formulas apply!
+
+---
+
+# Derivatives of Multivariate Functions
+
+**Example** Suppose a consumer's utility over `\(x_1\)` and `\(x_2\)` is given by 
+
+$$ U(x_1, x_2) = x_1 \ln x_2$$
+To find the partial derivatives, treat the other variables as constants: 
+
+$$ \dfrac{\partial U}{\partial x_1} = U_1 = \ln x_2$$
+$$ \dfrac{\partial U}{\partial x_2} = U_2 = x_1 \dfrac{1}{x_2} = \dfrac{x_1}{x_2}$$
+
+Notice the subtle introduction of notation. The subscript will usually refer to a partial derivative with respect to that variable.
+
+$$f(x_1, \ldots,  x_n) \rightarrow \dfrac{\partial f}{\partial x_i} = f_i $$
+
+---
+
+# Derivatives of Multivariate Functions
+
+We can also take second-order derivatives (and third-order, etc.) But, even more interesting and useful is that we can take "cross-partial" derivatives, where we first take the derivative with respect to one independent variable and then take a derivative with respect to another variable.
+
+--
+
+Using the previous example: 
+
+$$
+\begin{aligned}
+U_{11} &amp;= \dfrac{\partial U_1}{\partial x_1} = 0 \\
+U_{12} &amp;= \dfrac{\partial U_1}{\partial x_2} = \dfrac{1}{x_2} \\
+U_{21} &amp;= \dfrac{\partial U_2}{\partial x_1} = \dfrac{1}{x_2} \\
+U_{22} &amp;= \dfrac{\partial U_2}{\partial x_2} = \dfrac{-x_1}{x_2^2} 
+\end{aligned}
+$$
+What do you notice about `\(U_{12}\)` and `\(U_{21}\)`?
+
+---
+
+# Total Derivative
+
+As we move along, we also want to allow for the idea that in reality, not everything everything is easily held constant. In other words, there may be an implicit relationship between `\(x_2\)` and `\(x_1\)` so that if you vary one input, you are effectively varying the other.
+
+--
+
+A **Total Derivative** captures this effect. Suppose `\(y = f(x_1, x_2)\)` and we want the total impact of a change in `\(x_1\)` on `\(y\)`, including through any impact on `\(x_2\)`: 
+
+$$
+\begin{aligned}
+\dfrac{dy}{dx_1} &amp;= \dfrac{\partial y}{\partial x_1} \dfrac{dx_1}{dx_1} + \dfrac{\partial y}{\partial x_2} \dfrac{dx_2}{dx_1} \\
+&amp;= \dfrac{\partial y}{\partial x_1} + \dfrac{\partial y}{\partial x_2} \dfrac{dx_2}{dx_1}
+\end{aligned}
+$$ 
+--
+
+**Example** Suppose a monopolist faces a demand curve of `\(Q = 1000 - 10P\)`. Find its marginal revenue curve using total differentiation.
+
+
+---
+
+# Unconstrained Optimization (again)
+
+When you optimize over two or more independent variables, we have the same **necessary first-order conditions** since we have to be at a critical value in each plane created by holding the other inputs constant. That is, for `\(y = f(x_1, x_2)\)`: 
+
+`$$\dfrac{\partial f}{\partial x_1} = f_1 = 0 \text{ and } \dfrac{\partial f}{\partial x_2} = f_2 = 0$$`
+--
+
+**Example** Suppose we wanted to find the maximum of `\(y = 20x_1 + 20x_2 - x_1^2 - x_2^2\)`
+
+&lt;img src="figures/max_two_vars.svg" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Second-Order Conditions
+
+The only real deviation from univariate optimization that we really need to worry about is avoiding "saddle-points".
+
+**Example** Suppose we had the function `\(y = x_1^2 - x_2^2\)`
+
+--
+
+&lt;img src="figures/saddle_point.svg" width="40%" style="display: block; margin: auto;" /&gt;
+
+We can simultaneously have a maximum when viewed from the direction of one of the independent variables and a minimum when viewed from the direction of the other. 
+
+---
+
+# Second-Order Conditions
+
+The second-order conditions are therefore a bit more complicated for multivariate functions, but not by much. For the function `\(y = f(x_1, x_2)\)`, we have the following:
+
+### (Sufficient) Second-order Conditions for a Maximum
+
+`$$\dfrac{\partial^2 f}{\partial x_1^2} = f_{11} &lt; 0 \text{ and } \dfrac{\partial^2 f}{\partial x_2^2} = f_{22} &lt; 0 \\
+\text{ AND }[f_{11}f_{22} - (f_{12}^2)] &gt; 0 \text{ (saddle-point condition)}$$`
+
+### (Sufficient) Second-order Conditions for a Minimum
+
+`$$\dfrac{\partial^2 f}{\partial x_1^2} = f_{11} &gt; 0 \text{ and } \dfrac{\partial^2 f}{\partial x_2^2} = f_{22} &gt; 0 \\
+\text{ AND }[f_{11}f_{22} - (f_{12}^2)] &gt; 0 \text{ (saddle-point condition)}$$`
+
+---
+
+# Constrained Optimization
+
+Most problems in microeconomics involve optimizing a function with respect to some constraint. In math, this looks like: 
+
+$$
+\begin{gather}
+\max_{x_1, x_2} y = f(x_1, x_2)\\
+\text{s.t. }  g(x_1, x_2) = \overline{c}
+\end{gather}
+$$
+where `\(\overline{c}\)` is some constant value.
+
+If everything is arithmetically and algebraically nice and easy, we can occasionally use our system of optimization equations to solve for `\(x_1^*\)` and `\(x_2^*\)` without much trouble. But, there's an easier way that also yields some economic insight. 
+
+---
+
+# The Lagrangian Multiplier Method
+
+The constrained optimization problem can converted into a generalized Lagrangian function `\(\mathscr{L}(x_1, x_2, \lambda)\)`: 
+
+`$$\mathscr{L}(x_1, x_2, \lambda) = f(x_1, x_2) + \lambda [\overline{c} - g(x_1, x_2)]$$`
+Note that to optimize `\(\mathscr{L}\)`, we actually need *three* first-order conditions: 
+
+$$
+\begin{aligned}
+\dfrac{\partial \mathscr{L}}{\partial x_1} &amp;= f_1 - \lambda g_1 = 0 \\
+\dfrac{\partial \mathscr{L}}{\partial x_2} &amp;= f_2 - \lambda g_2 = 0 \\
+\dfrac{\partial \mathscr{L}}{\partial \lambda} &amp;= \overline{c} - g(x_1, x_2) = 0
+\end{aligned}
+$$
+
+Notice that the final condition just gives us back the original constraint. Also notice that at the critical values of `\(\mathscr{L}\)`: 
+
+`$$\dfrac{f_1}{g_1} = \dfrac{f_2}{g_2} = \lambda$$` 
+.font80[
+The Lagrangian multiplier, `\(\lambda\)` can be interpreted as the "shadow price" relating to relaxing the constraint ever so slightly.
+]
+
+---
+
+# Primal-Dual Analysis
+
+One thing that should be popping up in your head at this point is that with the same first-order conditions, the steps for maximization and minimization in a constrained optimization are eerily similar. Well, they are!
+
+The **primal** optimization problem is the one we typically set out to solve, e.g., maximize utility subject to a budget constraint. The **dual** problem is the alternative approach, e.g., minimize expenditure subject to a constant level of utility. 
+
+In math, the primal problem would be 
+
+$$
+\begin{gather}
+\max_{x_1, x_2} y = f(x_1, x_2)\\
+\text{s.t. }  g(x_1, x_2) = \overline{c}
+\end{gather}
+$$
+and the dual problem would be 
+
+$$
+\begin{gather}
+\min_{x_1, x_2} c = g(x_1, x_2) \\
+\text{s.t. } f(x_1, x_2) = \overline{y}
+\end{gather}
+$$
+
+Set up the Lagrangians and check the first-order conditions!
+
+---
+
+# The Envelope Theorem
+
+Recall in our introductory comparative statics example that we used the implicit function theorem to derive `\(x^*(t)\)` and show that the firm's output will decline when the tax rate increases. 
+
+This type of maneuvering will be employed repeatedly in our optimization problems, and there is a shortcut we use along these lines called the **envelope theorem**. 
+
+--
+
+The idea is that if a parameter `\(\alpha\)` is exogenous, then the optimal choice of `\(x\)` implicitly depends on `\(\alpha\)`, and therefore, the optimal value of `\(y\)` depends on `\(\alpha\)` as well. 
+
+The envelope theorem is a shortcut to get to this final relationship ( `\(\dfrac{dy^*}{d\alpha}\)` ).
+
+---
+
+# The Envelope Theorem
+
+**Example** Let's start with a univariate maximization example: `\(y = f(x) = -\frac{1}{2}x^2 + \alpha x\)`. 
+
+The first-order condition for a maximum is 
+
+`$$\dfrac{dy}{dx} = -x + \alpha = 0 \implies x^* = \alpha$$`
+We can substitute this into our original function to get a function for the optimal value of `\(y\)` as a function of `\(\alpha\)`
+
+`$$y* = f(x^*) = -\frac{1}{2}\alpha^2 + \alpha^2 = \frac{1}{2} \alpha^2 \text{ and } \dfrac{dy^*}{d\alpha} = \alpha$$`
+--
+
+Did you notice that `\(\dfrac{dy^*}{d\alpha} = x^*(\alpha)\)`? That's not a coincidence. 
+
+The **envelope theorem** states that when we hold `\(x\)` constant at its optimal value, we can obtain `\(\dfrac{dy^*}{d\alpha}\)` **directly from the original objective function!!!**
+
+`$$\dfrac{dy^*}{d\alpha} = \dfrac{\partial f}{\partial \alpha}\bigg\rvert_{x = x^*}$$`
+
+---
+
+# The Envelope Theorem
+
+.font80[
+That doesn't seem like too much of a shortcut, you say? Well, imagine if we had `\(n\)` choice variables in our objective function. 
+
+`$$y = f(x_1, x_2,\ldots, x_n, \alpha)$$`
+We would have `\(n\)` first-order conditions and `\(n\)` functions of `\(\alpha\)`: 
+
+`$$\dfrac{\partial f}{\partial x_i} = 0 \text{ for } (i = 1, 2, \ldots, n)$$`
+`$$x_1^* = x_1^*(\alpha); x_2^* = x_2^*(\alpha); \ldots; x_n^* = x_n^*(\alpha)$$` 
+Substituting in and differentiating, we get
+
+`$$y^* = f(x_1^*(\alpha), x_2^*(\alpha),\ldots, x_n^*(\alpha), \alpha)$$`
+`$$\dfrac{d y^*}{d \alpha} = \dfrac{\partial f}{\partial x_1} \cdot \dfrac{\partial x_1}{\partial \alpha} + \dfrac{\partial f}{\partial x_2} \cdot \dfrac{\partial x_2}{\partial \alpha} + \cdots + \dfrac{\partial f}{\partial x_n} \cdot \dfrac{\partial x_n}{\partial \alpha} + \dfrac{\partial f}{\partial \alpha}$$`
+If all the choice variables are held at their optimal levels, the `\(n\)` products are all zero. We could have just taken the envelope shortcut: 
+
+`$$\dfrac{d y^*}{d \alpha} = \dfrac{\partial f}{\partial \alpha}$$`
+]
+
+---
+
+# Inequality Constraints
+
+Occasionally, we will need to think of optimization problems with inequality constraints. 
+
+$$
+\begin{gather}
+\max_{x_1, x_2} y = f(x_1, x_2)\\
+\text{s.t. }  g(x_1, x_2) \geq 0; x_1 \geq 0; x_2 \geq 0
+\end{gather}
+$$
+
+We can introduce *slack variables* `\(x_3, s_1, \text{ and }s_2\)` in a convenient way to turn the constraints into equalities: 
+
+$$
+\begin{gather}
+\max_{x_1, x_2} y = f(x_1, x_2)\\
+\text{s.t. }  g(x_1, x_2) - x_3^2 = 0; x_1 - s_1^2 = 0; x_2 - s_2^2 = 0
+\end{gather}
+$$
+The *convenient* part of this set-up is that if a choice of `\((x_1, x_2)\)` satisfies the equality constraints, then it necessarily satisfies the inequality constraints.
+
+---
+
+# Inequality Constraints
+
+The Lagrangian is then
+
+`$$\mathscr{L} = f(x_1, x_2) + \lambda (g(x_1, x_2) - x_3^2) + \lambda_1(x_1 - s_1^2) + \lambda_2(x_2 - s_2^2)$$`
+
+We now have 8 first-order conditions
+
+$$
+\begin{aligned}
+\mathscr{L}_{x_1} &amp;= f_1 + \lambda g_1 + \lambda_1 = 0 \\
+\mathscr{L}_{x_2} &amp;= f_2 + \lambda g_2 + \lambda_2 = 0 \\
+\mathscr{L}_{x_3} &amp;= -2\lambda x_3 = 0 \\
+\mathscr{L}_{s_1} &amp;= -2\lambda_1 s_1 = 0 \\
+\mathscr{L}_{s_2} &amp;= -2\lambda_2 s_2 = 0 \\
+\mathscr{L}_{\lambda} &amp;= g(x_1, x_2) - x_3^2 = 0 \\
+\mathscr{L}_{\lambda_1} &amp;= x_1 - s_1^2 = 0 \\
+\mathscr{L}_{\lambda_2} &amp;= x_2 - s_2^2 = 0 \\
+\end{aligned}
+$$
+---
+
+# Inequality Constraints
+
+Phew. 
+--
+Let's look at the third condition, `\(\mathscr{L}_{x_3} = -2\lambda x_3 = 0\)`. 
+
+This condition tells us either `\(\lambda = 0\)` or `\(x_3 = 0\)`
+* If `\(x_3 = 0\)`, then the original constraint holds in equality: `\(g(x_1, x_2) = 0\)`
+* If `\(\lambda = 0\)`, then there is zero shadow price/value the individual would pay to relax the constraint (it's already relaxed)
+
+These first-order conditions are referred to as the *Kuhn-Tucker* conditions for an optimization problem with inequality constraints.
+
+---
+
+# Elasticity
+
+Elasticities are unit-free ratios of percentage changes. That is, they answer the question: "What is the percentage change in the dependent variable given a percentage change in the independent variable (and in which direction)?" Suppose `\(y = f(x_1,\ldots, x_n)\)`, then
+
+`$$\varepsilon_{y,x_i} = \lim_{\Delta x_i \rightarrow 0} \dfrac{\Delta y/y}{\Delta x_i/x_i} = \lim_{\Delta x_i \rightarrow 0} \dfrac{x_i}{y} \cdot \dfrac{\Delta y}{\Delta x_i} = \dfrac{x_i}{y} \cdot \dfrac{\partial y}{\partial x_i}$$`
+**Example** Let `\(y = f(x) = \alpha x^{\beta}\)`. Show that this function has constant elasticity. How does this particular function help us understand that elasticities can be calculated through logarithmic differentiation?
+
+---
+
+# Homogeneous Functions
+
+**Definition** A function `\(f(x_1,\ldots, x_n)\)` is said to be homogeneous of degree `\(r\)` if and only if 
+`$$f(tx_1,\ldots, tx_n) \equiv t^r f(x_1,\ldots, x_n)$$`
+--
+
+**Example** Show the Cobb-Douglas production function `\(y = f(L,K) = L^{\alpha}K^{1-\alpha}\)` is homogeneous of degree 1.
+
+$$
+\begin{aligned}
+f(tL, tK) &amp;\equiv (tL)^{\alpha}(tK)^{1-\alpha} \\
+&amp;\equiv t^{\alpha}L^{\alpha}t^{1-\alpha}K^{1-\alpha} \\
+&amp;\equiv tL^{\alpha}K^{1-\alpha} \\
+&amp;\equiv tf(L,K)
+\end{aligned}
+$$
+Homogeneity of degree 1 is often called *linear homogeneity*, and in the case of production functions, we say it has constant returns to scale.
+
+---
+
+# Homogeneous Functions
+
+.font80[
+Now, let's look at the marginal product functions of the Cobb-Douglas production function
+
+`$$\begin{aligned}
+MP_L &amp;= f_L = \alpha L^{\alpha - 1}K^{1-\alpha} = \alpha \left(\dfrac{K}{L}\right)^{1 - \alpha} \\
+MP_K &amp;= f_K = (1 - \alpha) L^{\alpha}K^{-\alpha} = (1 - \alpha) \left(\dfrac{K}{L}\right)^{- \alpha} 
+\end{aligned}$$`
+
+How can we quickly tell that both functions are homogeneous of degree 0?
+
+**Theorem** If `\(f(x_1, x_2, \ldots, x_n)\)` is homogeneous of degree `\(r\)`, then the first partials `\(f_1, f_2, \ldots, f_n\)` are homogenous of degree `\(r-1\)`.
+
+**Proof** Differentiate both sides of the identity `$$f(tx_1,\ldots, tx_n) \equiv t^r f(x_1,\ldots, x_n)$$` with respect to `\(x_i\)`: 
+
+`$$\dfrac{\partial f}{\partial (tx_i)} \dfrac{\partial (tx_i)}{\partial x_i} \equiv t^r \dfrac{\partial f}{\partial x_i}$$`
+But, `\(\dfrac{\partial (tx_i)}{\partial x_i} = t\)`. Collecting terms implies the partial `\(f_i\)` is homogeneous of degree `\(r-1\)`.
+]
+
+---
+
+# Euler's Theorem
+
+**Euler's Theorem** Suppose `\(f(x_1, x_2, \ldots, x_n)\)` is homogeneous of degree `\(r\)`. Then 
+
+`$$\dfrac{\partial f}{\partial x_1} x_1 + \cdots + \dfrac{\partial f}{\partial x_n} x_n \equiv rf(x_1, x_2, \ldots, x_n)$$`
+**Proof** Differentiate both sides of the identity `$$f(tx_1,\ldots, tx_n) \equiv t^r f(x_1,\ldots, x_n)$$` with respect to `\(t\)`:
+
+`$$\dfrac{\partial f}{\partial (tx_1)} \dfrac{\partial (tx_1)}{\partial t} + \cdots + \dfrac{\partial f}{\partial (tx_n)} \dfrac{\partial (tx_n)}{\partial t} \equiv rt^{r-1} f(x_1, x_2, \ldots, x_n)$$`
+Noting that `\(\dfrac{\partial (tx_i)}{\partial t} = x_i\)` and that the identity must hold for all `\(t\)`, including `\(t=1\)`, we obtain Euler's Theorem. 
+
+What does Euler's Theorem imply for our Cobb-Douglas production function?
+
+---
+
+# Homothetic Functions
+
+.font80[
+Let `\(y = f(x_1, x_2, \ldots, x_n)\)` be a production function that is homogeneous of degree `\(r\)`. Recall that an isoquant is a level curve such that the change in `\(y\)` given a change in `\(x_i\)` is zero by definition. Using total differentiation, we can show that the slope of an isoquant in the `\(x_ix_j\)` plane is: 
+
+`$$\dfrac{dx_j}{dx_i} = -\dfrac{f_i}{f_j}$$`
+
+Since `\(f\)` is homogeneous, if we proportionately increase all our inputs by `\(t\)`, our new isoquant will have the same slope along the radial expansion: 
+]
+
+&lt;img src="figures/isoquant_homogeneous.svg" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Homothetic Functions
+
+The previous useful property also holds for **homothetic** functions. A homothetic function is a monotonic transformation of a homogeneous function. While homothetic functions are rarely themselves homogeneous, the result implies that in a broad class of functions in economics we need not consider the absolute levels of inputs, but rather the ratios/trade-offs.
+
+---
+
+# Linear Algebra Basics
+
+Linear Algebra techniques generally make things easier throughout economics and econometrics. In microeconomics and comparative statics, in particular, we can use linear algebra results/theorems to make most of our optimization problems simpler to write and solve. (Especially as the systems of equations get large.)
+
+Suppose we have the following system of equations (we'll mostly stick with systems of 2 or 3 equations, and expanding to `\(n\)` equations is usually straightforward):
+
+`$$\begin{aligned}
+a_{11}x_1 + a_{12}x_2 &amp;= b_1 \\
+a_{21}x_1 + a_{22}x_2 &amp;= b_2
+\end{aligned}$$`
+
+We can separate the coefficients from the unknowns and write this in matrix notation: 
+
+`$$\begin{bmatrix}
+a_{11} &amp; a_{12} \\ 
+a_{21} &amp; a_{22}
+\end{bmatrix}
+\begin{bmatrix}
+x_{1} \\ 
+x_{2}
+\end{bmatrix} 
+=
+\begin{bmatrix}
+b_{1} \\ 
+b_{2}
+\end{bmatrix}$$`
+
+or also written as `\(\mathbf{A} \mathbf{x} = \mathbf{b}\)`
+
+---
+
+# Determinants and Cramer's Rule
+
+In the previous system of two equations, we can solve for `\(x_1\)` and `\(x_2\)` through brute force substitution and get: 
+
+`$$\begin{aligned}
+x_1 &amp;= \dfrac{b_1 a_{22} - b_2 a_{12}}{a_{11} a_{22} - a_{12} a_{21}}\\
+x_2 &amp;= \dfrac{b_2 a_{11} - b_1 a_{21}}{a_{11} a_{22} - a_{12} a_{21}}\end{aligned}$$`
+
+Or, we could write this in terms of determinants. Recall that a **determinant** of a 2x2 matrix is defined as: 
+
+`$$D_2 = \begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix} = ad - bc$$`
+
+The solutions then become: 
+
+`$$x_1 = \dfrac{\begin{vmatrix} b_1 &amp; a_{12} \\ b_2 &amp; a_{22} \end{vmatrix}}{\begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix}} \quad x_2 = \dfrac{\begin{vmatrix} a_{11} &amp; b_{1} \\ a_{21} &amp; b_{2} \end{vmatrix}}{\begin{vmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{vmatrix}}$$`
+
+
+---
+
+# Determinants and Cramer's Rule
+
+Notice that in the previous system of equations, we could simply swap the `\(\mathbf{b}\)` column vector with the relevant coefficient vector of the variable we are solving for, calculate some determinants, and voila, we have a solution, assuming `\(|\mathbf{A}| \neq 0\)`. This is known as **Cramer's Rule**, and works for a system of `\(n\)` equations in `\(n\)` unknowns.
+
+Determinants of higher order are a bit trickier, but they can be written as functions of lower order determinants. The general strategy is to take the value in the `\(ij\)` row and column and multiply it by its *minor*, which you can likely guess from the following: 
+
+`$$D_3 = 
+\begin{vmatrix} 
+a_{11} &amp; a_{12} &amp; a_{13} \\ 
+a_{21} &amp; a_{22} &amp; a_{23} \\
+a_{31} &amp; a_{32} &amp; a_{33}
+\end{vmatrix} = 
+a_{11} \begin{vmatrix} a_{22} &amp; a_{23} \\ a_{32} &amp; a_{33}  \end{vmatrix} - a_{12} \begin{vmatrix} a_{21} &amp; a_{23} \\ a_{31} &amp; a_{33}  \end{vmatrix} + a_{13} \begin{vmatrix} a_{21} &amp; a_{22} \\ a_{31} &amp; a_{32}  \end{vmatrix}$$`
+
+The *minor of `\(a_{ij}\)`* is the determinant left after deleting row `\(i\)` and column `\(j\)` from the original determinant. Notice that one of the minors comes in with a negative sign. This is called the *cofactor of `\(a_{ij}\)`* and is defined as `\((-1)^{ij}\)`. 
+
+In this fashion, we can continue to define higher-order determinants, although we mostly just need to go to order 3 for our problems.
+
+---
+
+# Some Final Concepts
+
+The *leading principal minors* of an `\(n\)` x `\(n\)` square matrix `\(\mathbf{A}\)` are the series of determinants of the first `\(p\)` rows and columns of `\(\mathbf{A}\)`, where `\(p = 1, \ldots, n\)`.
+
+An `\(n\)` x `\(n\)` square matrix `\(\mathbf{A}\)`, is *positive definite* if all of its leading principal minors are positive. The matrix is *negative definite* if its principal minors alternate in sign starting with a minus.
+
+A particularly useful symmetric matrix is the *Hessian* matrix formed by all of the second-order partial derivatives of a function. If `\(f\)` is a continuous and twice differentiable function of 2 variables, then its Hessian is given by
+
+`$$\mathbf{H} = \begin{bmatrix} f_{11} &amp; f_{12} \\ f_{21} &amp; f_{22}  \end{bmatrix}$$`
+
+Notice that the Hessian being negative definite aligns with our second-order conditions for a maximum: `\(f_{11} &lt; 0\)` and `\(f_{11}f_{22} - f_{12}^2 &gt; 0\)`. 
+
+---
+
+# Some Final Concepts
+
+We will also use a "bordered" Hessian when working with constrained optimization problems, where the constraint enters in the second-order conditions via the Lagrangian function. For `\(\mathscr{L} = f(x_1, x_2) + \lambda g(x_1, x_2)\)`, the Hessian would be by definition: 
+
+`$$\mathbf{H} = 
+\begin{bmatrix} \mathscr{L}_{11} &amp; \mathscr{L}_{12} &amp; \mathscr{L}_{1\lambda} \\ \mathscr{L}_{21} &amp; \mathscr{L}_{22} &amp; \mathscr{L}_{2\lambda} \\ \mathscr{L}_{\lambda 1} &amp; \mathscr{L}_{\lambda 2} &amp; \mathscr{L}_{\lambda \lambda} \end{bmatrix}$$`
+
+This reduces to the following: 
+
+`$$\mathbf{H} = 
+\begin{bmatrix} \mathscr{L}_{11} &amp; \mathscr{L}_{12} &amp; g_1 \\ \mathscr{L}_{21} &amp; \mathscr{L}_{22} &amp; g_2 \\ g_1 &amp; g_2 &amp; 0 \end{bmatrix}$$`
+
+A sufficient condition for `\(f\)` to have a maximum subject to `\(g\)` is, together with the necessary first-order conditions, that `\(|\mathbf{H}| &gt; 0\)`. The condition for a minimum is that `\(|\mathbf{H}| &lt; 0\)`.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

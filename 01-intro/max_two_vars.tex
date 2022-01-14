@@ -1,0 +1,9 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[domain=0:20,y domain=0:20]
+    \addplot3[surf] {20*x + 20*y - x^2 - y^2};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

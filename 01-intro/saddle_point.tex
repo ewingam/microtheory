@@ -1,0 +1,9 @@
+\documentclass{standalone}
+\usepackage{pgfplots}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[domain=-1:1,y domain=-1:1]
+    \addplot3[surf] {x^2 - y^2};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

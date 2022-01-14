@@ -1,2 +1,1 @@
-# microtheory
-Lecture Notes for Graduate Microeconomic Theory
+Graduate Microeconomic Theory Notes
