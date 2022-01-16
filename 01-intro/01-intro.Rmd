@@ -122,13 +122,11 @@ Suppose we assert the following about firms: Firms maximize profits $\pi$ where 
 
 Let 
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 R(x) &= \text{total revenue function (depending on output } x ) \\
 C(x) &= \text{total cost function} \\
 tx   &= \text{total tax revenue collected, where } t \text{ is exogenous}
-\end{aligned}
-$$
+\end{aligned}$$
 Assume the firm is perfectly competitive, i.e., 
 
 --
@@ -250,14 +248,12 @@ What kind of firm is typically modeled this way?
 
 As long as the derivative of a function is itself differentiable, we can continue taking higher-order derivatives. Usually, the second derivative is important in our problems, and occasionally the third derivative. 
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 y &= f(x) = x^3 + 4x^2 - 6x + 9 \\
 \dfrac{dy}{dx} &= f'(x) = 3x^2 + 8x - 6 \\
 \dfrac{d^2y}{dx^2} &= f''(x) = 6x + 8 \\
 \dfrac{d^3y}{dx^3} &= f'''(x) = 6
-\end{aligned}
-$$
+\end{aligned}$$
 
 ---
 
@@ -340,11 +336,11 @@ All the same rules and formulas apply!
 
 **Example** Suppose a consumer's utility over $x_1$ and $x_2$ is given by 
 
-$$ U(x_1, x_2) = x_1 \ln x_2$$
+$$U(x_1, x_2) = x_1 \ln x_2$$
 To find the partial derivatives, treat the other variables as constants: 
 
-$$ \dfrac{\partial U}{\partial x_1} = U_1 = \ln x_2$$
-$$ \dfrac{\partial U}{\partial x_2} = U_2 = x_1 \dfrac{1}{x_2} = \dfrac{x_1}{x_2}$$
+$$\dfrac{\partial U}{\partial x_1} = U_1 = \ln x_2$$
+$$\dfrac{\partial U}{\partial x_2} = U_2 = x_1 \dfrac{1}{x_2} = \dfrac{x_1}{x_2}$$
 
 Notice the subtle introduction of notation. The subscript will usually refer to a partial derivative with respect to that variable.
 
@@ -360,14 +356,12 @@ We can also take second-order derivatives (and third-order, etc.) But, even more
 
 Using the previous example: 
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 U_{11} &= \dfrac{\partial U_1}{\partial x_1} = 0 \\
 U_{12} &= \dfrac{\partial U_1}{\partial x_2} = \dfrac{1}{x_2} \\
 U_{21} &= \dfrac{\partial U_2}{\partial x_1} = \dfrac{1}{x_2} \\
 U_{22} &= \dfrac{\partial U_2}{\partial x_2} = \dfrac{-x_1}{x_2^2} 
-\end{aligned}
-$$
+\end{aligned}$$
 What do you notice about $U_{12}$ and $U_{21}$?
 
 ---
@@ -380,16 +374,10 @@ As we move along, we also want to allow for the idea that in reality, not everyt
 
 A **Total Derivative** captures this effect. Suppose $y = f(x_1, x_2)$ and we want the total impact of a change in $x_1$ on $y$, including through any impact on $x_2$: 
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 \dfrac{dy}{dx_1} &= \dfrac{\partial y}{\partial x_1} \dfrac{dx_1}{dx_1} + \dfrac{\partial y}{\partial x_2} \dfrac{dx_2}{dx_1} \\
 &= \dfrac{\partial y}{\partial x_1} + \dfrac{\partial y}{\partial x_2} \dfrac{dx_2}{dx_1}
-\end{aligned}
-$$ 
---
-
-**Example** Suppose a monopolist faces a demand curve of $Q = 1000 - 10P$. Find its marginal revenue curve using total differentiation.
-
+\end{aligned}$$
 
 ---
 
@@ -444,12 +432,10 @@ $$\dfrac{\partial^2 f}{\partial x_1^2} = f_{11} > 0 \text{ and } \dfrac{\partial
 
 Most problems in microeconomics involve optimizing a function with respect to some constraint. In math, this looks like: 
 
-$$
-\begin{gather}
+$$\begin{gather}
 \max_{x_1, x_2} y = f(x_1, x_2)\\
 \text{s.t. }  g(x_1, x_2) = \overline{c}
-\end{gather}
-$$
+\end{gather}$$
 where $\overline{c}$ is some constant value.
 
 If everything is arithmetically and algebraically nice and easy, we can occasionally use our system of optimization equations to solve for $x_1^*$ and $x_2^*$ without much trouble. But, there's an easier way that also yields some economic insight. 
@@ -463,13 +449,11 @@ The constrained optimization problem can converted into a generalized Lagrangian
 $$\mathscr{L}(x_1, x_2, \lambda) = f(x_1, x_2) + \lambda [\overline{c} - g(x_1, x_2)]$$
 Note that to optimize $\mathscr{L}$, we actually need *three* first-order conditions: 
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 \dfrac{\partial \mathscr{L}}{\partial x_1} &= f_1 - \lambda g_1 = 0 \\
 \dfrac{\partial \mathscr{L}}{\partial x_2} &= f_2 - \lambda g_2 = 0 \\
 \dfrac{\partial \mathscr{L}}{\partial \lambda} &= \overline{c} - g(x_1, x_2) = 0
-\end{aligned}
-$$
+\end{aligned}$$
 
 Notice that the final condition just gives us back the original constraint. Also notice that at the critical values of $\mathscr{L}$: 
 
@@ -488,20 +472,16 @@ The **primal** optimization problem is the one we typically set out to solve, e.
 
 In math, the primal problem would be 
 
-$$
-\begin{gather}
+$$\begin{gather}
 \max_{x_1, x_2} y = f(x_1, x_2)\\
 \text{s.t. }  g(x_1, x_2) = \overline{c}
-\end{gather}
-$$
+\end{gather}$$
 and the dual problem would be 
 
-$$
-\begin{gather}
+$$\begin{gather}
 \min_{x_1, x_2} c = g(x_1, x_2) \\
 \text{s.t. } f(x_1, x_2) = \overline{y}
-\end{gather}
-$$
+\end{gather}$$
 
 Set up the Lagrangians and check the first-order conditions!
 
@@ -517,7 +497,7 @@ This type of maneuvering will be employed repeatedly in our optimization problem
 
 The idea is that if a parameter $\alpha$ is exogenous, then the optimal choice of $x$ implicitly depends on $\alpha$, and therefore, the optimal value of $y$ depends on $\alpha$ as well. 
 
-The envelope theorem is a shortcut to get to this final relationship ( $\dfrac{dy^*}{d\alpha}$ ).
+The envelope theorem is a shortcut to get to this final relationship  $\Bigg(\dfrac{dy^*}{d\alpha}\Bigg)$.
 
 ---
 
@@ -566,21 +546,17 @@ $$\dfrac{d y^*}{d \alpha} = \dfrac{\partial f}{\partial \alpha}$$
 
 Occasionally, we will need to think of optimization problems with inequality constraints. 
 
-$$
-\begin{gather}
+$$\begin{gather}
 \max_{x_1, x_2} y = f(x_1, x_2)\\
 \text{s.t. }  g(x_1, x_2) \geq 0; x_1 \geq 0; x_2 \geq 0
-\end{gather}
-$$
+\end{gather}$$
 
 We can introduce *slack variables* $x_3, s_1, \text{ and }s_2$ in a convenient way to turn the constraints into equalities: 
 
-$$
-\begin{gather}
+$$\begin{gather}
 \max_{x_1, x_2} y = f(x_1, x_2)\\
 \text{s.t. }  g(x_1, x_2) - x_3^2 = 0; x_1 - s_1^2 = 0; x_2 - s_2^2 = 0
-\end{gather}
-$$
+\end{gather}$$
 The *convenient* part of this set-up is that if a choice of $(x_1, x_2)$ satisfies the equality constraints, then it necessarily satisfies the inequality constraints.
 
 ---
@@ -593,8 +569,7 @@ $$\mathscr{L} = f(x_1, x_2) + \lambda (g(x_1, x_2) - x_3^2) + \lambda_1(x_1 - s_
 
 We now have 8 first-order conditions
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 \mathscr{L}_{x_1} &= f_1 + \lambda g_1 + \lambda_1 = 0 \\
 \mathscr{L}_{x_2} &= f_2 + \lambda g_2 + \lambda_2 = 0 \\
 \mathscr{L}_{x_3} &= -2\lambda x_3 = 0 \\
@@ -603,8 +578,7 @@ $$
 \mathscr{L}_{\lambda} &= g(x_1, x_2) - x_3^2 = 0 \\
 \mathscr{L}_{\lambda_1} &= x_1 - s_1^2 = 0 \\
 \mathscr{L}_{\lambda_2} &= x_2 - s_2^2 = 0 \\
-\end{aligned}
-$$
+\end{aligned}$$
 ---
 
 # Inequality Constraints
@@ -638,14 +612,12 @@ $$f(tx_1,\ldots, tx_n) \equiv t^r f(x_1,\ldots, x_n)$$
 
 **Example** Show the Cobb-Douglas production function $y = f(L,K) = L^{\alpha}K^{1-\alpha}$ is homogeneous of degree 1.
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 f(tL, tK) &\equiv (tL)^{\alpha}(tK)^{1-\alpha} \\
 &\equiv t^{\alpha}L^{\alpha}t^{1-\alpha}K^{1-\alpha} \\
 &\equiv tL^{\alpha}K^{1-\alpha} \\
 &\equiv tf(L,K)
-\end{aligned}
-$$
+\end{aligned}$$
 Homogeneity of degree 1 is often called *linear homogeneity*, and in the case of production functions, we say it has constant returns to scale.
 
 ---
